@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Список задач</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="wrapper ">
+            <header class="header"></header>
+            <main class="main show-box">
+                <div class="container">
+                    <form action="" class="form" name="addTask">
+                        <div class="add-task">
+                            <div class="add-task__group">
+                                <label class="form-label add-task__label" for="task-text">Що треба зробити?</label>
+                                <textarea
+                                    class="form-field"
+                                    id="task-text"
+                                    name="taskText"
+                                    placeholder="Введіть текст задачі"
+                                ></textarea>
+                                <div class="form-error-msg"></div>
+                            </div>
+                            <div class="add-task__pair">
+                                <div class="form-label add-task__date-label">
+                                    Оберіть
+                                    <label for="task-date">дату</label>
+                                    та
+                                    <label for="task-time">час</label>
+                                    , коли треба завершити задачу
+                                </div>
+                                <div class="d-flex add-task__doublet">
+                                    <div class="add-task__group">
+                                        <input
+                                            class="form-field form-field--date"
+                                            name="taskDate"
+                                            type="date"
+                                            id="task-date"
+                                        >
+                                        <div class="form-error-msg"></div>
+                                    </div>
+                                    <div class="add-task__group">
+                                        <input
+                                            class="form-field form-field--time"
+                                            name="taskTime"
+                                            type="time"
+                                            id="task-time"
+                                        >
+                                        <div class="form-error-msg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-task__categories">
+                                <label for="category[0]" class="form-label">Обери категорію</label>
+                                <ul class="categories d-flex">
+                                    <li class="categories__group">
+                                        <input
+                                            class="sr-only category-checkbox"
+                                            id="category[0]"
+                                            type="radio"
+                                            name="taskCategory"
+                                            value="urgent"
+                                            checked
+                                        >
+                                        <label class="category-item category-item--urgent" for="category[0]">Негайні</label>
+                                    </li>
+                                    <li class="categories__group">
+                                        <input
+                                            class="sr-only category-checkbox"
+                                            id="category[1]"
+                                            type="radio"
+                                            name="taskCategory"
+                                            value="study"
+                                        >
+                                        <label class="category-item category-item--study" for="category[1]">Навчання</label>
+                                    </li>
+                                    <li class="categories__group">
+                                        <input
+                                            class="sr-only category-checkbox"
+                                            id="category[2]"
+                                            type="radio"
+                                            name="taskCategory"
+                                            value="work"
+                                        >
+                                        <label class="category-item category-item--work" for="category[2]">Робота</label>
+                                    </li>
+                                    <li class="categories__group">
+                                        <input
+                                            class="sr-only category-checkbox"
+                                            id="category[3]"
+                                            type="radio"
+                                            name="taskCategory"
+                                            value="hobby"
+                                        >
+                                        <label class="category-item category-item--hobby" for="category[3]">Хобі</label>
+                                    </li>
+                                </ul>
+                                <div class="form-error-msg"></div>
+                            </div>
+                            <button class="btn btn--icon add-task__btn" type="submit">Додати завдання</button>
+                            <div class="form-error">Дозаповніть форму</div>
+                        </div>
+                    </form>
+                    <ul class="task-list">
+                      <!-- додаємо створені задачі сюди -->
+                    </ul>
+                </div>
+            </main>
+            <div class="notifications">
+              <!-- додаємо повідомлення сюди -->
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
